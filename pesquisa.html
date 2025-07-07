@@ -16,10 +16,12 @@ body {
 
 p {
 	font-family: monospace, Lucida Console;
+	font-size: 0.8(1vw + 1vh)/2;
 }
 
 h1 {
 	font-family: monospace, Lucida Console;
+	font-size: 1.2(1vw + 1vh)/2;
 }
 
 .wrapper {
@@ -46,7 +48,6 @@ h1 {
 .wrapperTitle {
 	display: inline;
 	width: 25vw;
-	font-size: 1.2vw;
 	padding: 0 10px;
 	
 	color: white;
@@ -54,9 +55,16 @@ h1 {
 }
 
 .buttonBox {
-	display: flex;
-	align-content: space-evenly;
-	padding: 1.2vh 0;
+	display: inline-block;
+	height: 5vh;
+	width: 49vw;
+	
+	white-space: nowrap;
+	text-align: center;
+	vertical-align: top;
+	
+	border-radius: 10px;
+	background-image: linear-gradient(#f7d1f7, #c580c5);
 }
 
 .wrapperButton {
@@ -136,7 +144,7 @@ h1 {
 <body>
 <button class = "wrapperButton" onclick="document.location='index.html'">Início</button>
 <button class = "wrapperButton" onclick="document.location='pesquisa.html'">Pesquisa</button>
-<button class = "wrapperButtonLattes" onclick="document.location='https://wwws.cnpq.br/cvlattesweb/PKG_MENU.menu?f_cod=52F3E8B852E9746192ED767C0F4F6777#'">Lattes</button>
+<button class = "wrapperButtonLattes" onclick="document.location='https://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K1528854U6&tokenCaptchar=03AFcWeA4XuiWzSmkJdXaVXi_NQxpn4SZ5Z8XZsWLySkQTsw2j74Ro_Gsk9K2c61aHKF9p-X52TznmVdqy_vn85SX8YdXhE5AEOWZq3p3cfbDMy_F9i9r_tYnUIhXp-dsJA-fI5RTWY096wk2ajDh_3TKLanfT3A3BCMGoEiNbe26zT4-5MrxF9CODKG88LNhTxsEznDBJ5l3AYMwT8b2W6JYd-XG7IOxScJeNRdy_QXrAsLDb6Te6vGX_oe9zpkHVdJkZpZYKosICezKUZ6Vyz8QAJn4nrQsXX6GCi_qFKsDylGC30r4jcMEGrxehvfNYeleaoyuj4cKyG5ZssWs6T4iG0CZyJSs_sQqFMg5XISZnkz1tUwc2i2M-AFoxG_vznpwUvR30iTvORgesie3TjdS3vkjovhZGjZWCL-cmmJuYMSNcFR4uQYfGi4TSPA6K7uwR3wS9sUMXC0AeA7BPRry-6wrf2Mtp_r8WQkmQLHxr6Zr0yvLNO5r1K8h7hdq7cZt54dFnliT4VpCw03Zace0w2dDsfKq6I6BowBbz57zwUe99A59V0DJdmSxx2QHljVHgeBA5G-tMIIiNtoPxbuXOT2JPbcsRJawnsr4HBOmM4G9vKAK_17Rj9Ba9B78YA8ibm5yiZMeMufKDgfASaIbZV6_HsYkYyZ3K5OrI4f5lIcgNdxcu3KA4jMjAxaQoSZGrHzlhywRGTzXdjNVHbpxDF5ypW6k4bioghkvi1O6J6sg4QkIyaXGRk07bS7xG6XsLoIIqvFhmBNAGz133aiX_V1Z12S0uv-zyH7A-1VGQeEjT5m-GFcVxaMvvVeyXTIg0lUDJjnYLd_LjduCMQJAn_U6jdeQZi4icUzirWegh0YziJYoQ4ZGkIRFMzURXCMDICqsM9eBF7e3VJZdZ_9hoOQrN5alM839mvGVk7OBv2yuzl0-ziBmYr0dcTiNiXJeBB0rsAuKL'">Lattes</button>
 </body>
 </div>
 </div>
@@ -148,7 +156,7 @@ h1 {
 
 <div class = "pageBox">
 <h1>Bem vindo!</h1>
-<p>Infelizmente eu ainda não botei nada nesta página. Esta é a página de pesquisa.</p>
+<p>Infelizmente eu ainda não botei nada nesta página. Esta é a página de Pesquisa.</p>
 <p>Sinta-se livre para apreciar minha grande habilidade em front-end.</p>
 <p>juandesouzavf@gmail.com</p>
 </div>
