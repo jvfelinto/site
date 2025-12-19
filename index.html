@@ -20,7 +20,7 @@ html, body {
 }
 
 body {
-	background-color: gray;
+	background-color: black;
 	background-repeat: no-repeat;
 	min-height: 100%;
 }
@@ -142,6 +142,38 @@ button.menuButton {
 @media screen and (max-width: 1000px) {
 
 body {
+	--fontsize: 10px;
+}
+
+
+.sideContent {
+	display: none;
+	flex: 0;
+}
+
+section.main{
+	flex: 1;
+}
+
+
+
+wtitle {
+	letter-spacing: 1px;
+}
+
+.wrapper {
+	min-height: 6.5vh;
+}
+
+section.main{
+	min-height: 93.5vh
+}
+
+}
+
+@media screen and (max-width: 500px) {
+
+body {
 	--fontsize: 9px;
 }
 
@@ -162,27 +194,20 @@ wtitle {
 }
 
 .wrapper {
-	min-height: 7vh;
+	min-height: 5vh;
 }
 
 section.main{
-	min-height: 93vh
+	min-height: 95vh
 }
-
-}
-
-@media screen and (max-height: 800px) {
-
-body {
-	--fontsize: 8px;
-}
-
 
 button.menuButton {
 	padding: 4px 8px;
+	font-size: var(--fontsize);
 }
 
 }
+
 
 
 </style>
