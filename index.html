@@ -8,43 +8,49 @@
 
 <style>
 
+@property --fontsize {
+	syntax: "<length>";
+	inherits: true;
+	initial-value: 12px;
+}
+
 html, body {
 	margin: 0;
 	padding: 0;
-	height: 100%;
 }
 
 body {
-	background-image: linear-gradient(#4d4d4d , #1d1d1d);
+	background-color:red;
 	background-repeat: no-repeat;
+	min-height: 100%;
 }
 
 p {
 	font-family: Helvetica, sans-serif;
-	font-size: 10;
+	font-size: var(--fontsize);
 }
 
 a {
 	font-family: Helvetica, sans-serif;
-	font-size: 10;
+	font-size: var(--fontsize);
 }
 
 h1 {
 	font-family: Helvetica, sans-serif;
-	font-size: 20;
+	font-size: calc(2 * var(--fontsize));
 	padding: 0.5vh 0;
 }
 
 h2 {
 	font-family: Helvetica, sans-serif;
-	font-size: 15;
+	font-size: calc(1.5 * var(--fontsize));
 	padding: 0.5vh 0;
 }
 
 wtitle{
 	font-family: Helvetica, sans-serif;
 	color: white;
-	font-size: 25px;
+	font-size: calc(1.7 * var(--fontsize));
 	letter-spacing: 5px;
 	white-space: nowrap;
 	font-weight: bold;
@@ -52,10 +58,11 @@ wtitle{
 
 .wrapper {
 	position: sticky;
+	top: 0px;
 	background-image: linear-gradient(#bababa , #7a7a7a);
 	display: flex;
 	width: 100%;
-	height: 10vh;
+	min-height: 10vh;
 	align-items: center;
 	box-shadow: 0px 0px 5px black;
 	z-index: 10;
@@ -79,6 +86,9 @@ wtitle{
 }
 
 .sideContent {
+	position: sticky;
+	top: 10%;
+	background-image: linear-gradient(#4d4d4d , #1d1d1d);
 	flex: 0.3;
 	display: flex;
 	height: 90vh;
@@ -100,7 +110,7 @@ section.main {
 	flex: 0.6;
 	display: flex;
 	flex-direction: column;
-	height: 90vh;
+	min-height: 90vh;
 	align-items: center;
 	box-shadow: 0px 0px 20px black;
 }
@@ -119,19 +129,46 @@ button.menuButton {
 	color: white;
 	padding: 1vh 1vw;
 	text-align: center;
-	font-size: 20px;
+	font-size: calc(1.5 * var(--fontsize));
 	cursor: pointer;
 	letter-spacing: 5px;
 	white-space: nowrap;
 	font-weight: bold;
 	border-radius: 10px;
 	margin: 0px 1vw;
-	box-shadow: 0px 0px 10px gray;
+	box-shadow: 0px 0px 10px gray;s
 }
 
-p.assin {
-	padding-top: 20vh;
-	color: gray;
+@media screen and (max-width: 1000px) {
+
+body {
+	--fontsize: 9px;
+}
+
+
+.sideContent {
+	display: none;
+	flex: 0;
+}
+
+section.main{
+	flex: 1;
+}
+
+
+
+wtitle {
+	letter-spacing: 1px;
+}
+
+}
+
+@media screen and (max-height: 800px) {
+
+body {
+	--fontsize: 8px;
+}
+
 }
 
 
@@ -143,7 +180,7 @@ p.assin {
 <div class="wrapper"> <!--wrapper-->
 
 <div class="wrapperBox">
-<wtitle>Página Pessoal</wtitle>
+<wtitle>Página Pessoal - Juan de Souza</wtitle>
 </div>
 
 <div class="wrapperBox">
@@ -192,9 +229,8 @@ Meu orientador é o professor Pedro Roberto de Lima.</p>
 <h2>Monitoria - Introdução à Álgebra 2025.1 — ...</h2>
 <p>Sou monitor de Introdução à Álgebra na UFRRJ. Basicamente é teoria dos conjuntos e lógica.</p>
 
-</article>
 
-<p class="assin">Juan de Souza Vida Felinto</p>
+</article>
 
 </section>
 
