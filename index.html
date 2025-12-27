@@ -20,7 +20,7 @@ html, body {
 }
 
 body {
-	background-color: black;
+	background-color: #202020;
 	background-repeat: no-repeat;
 	min-height: 100%;
 }
@@ -138,6 +138,26 @@ article.active {
 	}
 	div.nonwrapper {
 		height: calc(100vh - 75px);
+	}
+	
+}
+
+@media screen and (max-height: 500px) {
+
+	article {
+		width: 90vw;
+	}
+	div.wcomp {
+		width: 90vw;
+	}
+	div.wrapper {
+		height: 50px;
+	}
+	div.nonwrapper {
+		height: calc(100vh - 50px);
+	}
+	body {
+		--stdsize: 12px;
 	}
 	
 }
