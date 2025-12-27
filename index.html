@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Página Pessoa - Juan de Souza</title>
+<title>Página Pessoal - Juan de Souza</title>
 
 <style>
 
-@property --fontsize {
+@property --stdsize {
 	syntax: "<length>";
 	inherits: true;
-	initial-value: 12px;
+	initial-value: 15px;
 }
 
 html, body {
@@ -25,257 +25,184 @@ body {
 	min-height: 100%;
 }
 
+
 p {
+	color: white;
 	font-family: Helvetica, sans-serif;
-	font-size: var(--fontsize);
+	font-size: var(--stdsize);
 }
 
 a {
+	color: Violet;
 	font-family: Helvetica, sans-serif;
-	font-size: var(--fontsize);
+	font-size: var(--stdsize);
 }
 
 h1 {
+	color: white;
 	font-family: Helvetica, sans-serif;
-	font-size: calc(2 * var(--fontsize));
+	font-size: calc(2 * var(--stdsize));
 	padding: 0.5vh 0;
 }
 
 h2 {
+	color: white;
 	font-family: Helvetica, sans-serif;
-	font-size: calc(1.5 * var(--fontsize));
+	font-size: calc(1.5 * var(--stdsize));
 	padding: 0.5vh 0;
 }
 
-wtitle{
+p.title	{
+	text-align: left;
+	flex: 0.6;
+	color: Violet;
+	font-style: italic;
+	letter-spacing: 3px;
 	font-family: Helvetica, sans-serif;
-	color: white;
-	font-size: calc(1.7 * var(--fontsize));
-	letter-spacing: 5px;
-	white-space: nowrap;
-	font-weight: bold;
+	font-size: calc(1.5 * var(--stdsize));
 }
 
-.wrapper {
-	position: sticky;
-	top: 0px;
-	background-image: linear-gradient(#bababa , #7a7a7a);
+button.wrapper {
+	color: Violet;
+	font-family: Helvetica, sans-serif;
+	flex: 0.2;
+	border: none;
+	background-color: transparent;
+	text-align: center;
+	font-size: var(--stdsize);
+	cursor: pointer;
+	letter-spacing: 2px;
+}
+
+button {
+	cursor: not-allowed;
+}
+
+button.active{
+	color: white;
+	cursor: pointer;
+}
+
+div.wrapper {
+	justify-content: space-around;
+	background-color: #404040;
 	display: flex;
 	width: 100%;
-	min-height: 9vh;
+	height: 100px;
 	align-items: center;
-	box-shadow: 0px 0px 5px black;
-	z-index: 10;
+	box-shadow: 0px 5px 5px black;
 }
 
-.wrapperBox {
+div.wcomp {
+	justify-content: space-between;
 	display: flex;
-	flex: 1;
-	height: 100%;
-	justify-content: center;
-	align-items: center;
+	width: 640px;
 }
 
-.notwrapper {
+
+div.nonwrapper {
 	display: flex;
 	justify-content: center;
 	align-items: top;
-	width: 100%;
-	min-height: 90%;
-	z-index: 9;
+	height: calc(100vh - 100px);
 }
 
-.sideContent {
-	position: sticky;
-	top: 10%;
-	background-image: linear-gradient(#4d4d4d , #1d1d1d);
-	flex: 0.3;
+section.main {
+	background-color: #202020;
+	flex: 1;
 	display: flex;
-	height: 91vh;
-	justify-content: center;
+	flex-direction: column;
+	min-height: 100%;
 	align-items: center;
 }
 
 article {
 	display: none;
-	max-width: 85%;
+	width: 640px;
 }
 
 article.active {
 	display: block;
 }
 
-section.main {
-	background-color: white;
-	flex: 0.6;
-	display: flex;
-	flex-direction: column;
-	min-height: 91vh;
-	align-items: center;
-	box-shadow: 0px 0px 20px black;
+@media screen and (max-width: 700px) {
+
+	article {
+		width: 90vw;
+	}
+	div.wcomp {
+		width: 90vw;
+	}
+	div.wrapper {
+		height: 75px;
+	}
+	div.nonwrapper {
+		height: calc(100vh - 75px);
+	}
+	
 }
-
-
-.menuContent {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-}
-
-button.menuButton {
-	font-family: Helvetica, sans-serif;
-	background-image: linear-gradient(#bababa , #9a9a9a);
-	border: none;
-	color: white;
-	padding: 7px 14px;
-	text-align: center;
-	font-size: calc(1.5 * var(--fontsize));
-	cursor: pointer;
-	letter-spacing: 5px;
-	white-space: nowrap;
-	font-weight: bold;
-	border-radius: 10px;
-	margin: 0px 1vw;
-	box-shadow: 0px 0px 10px gray;s
-}
-
-@media screen and (max-width: 1000px) {
-
-body {
-	--fontsize: 10px;
-}
-
-
-.sideContent {
-	display: none;
-	flex: 0;
-}
-
-section.main{
-	flex: 1;
-}
-
-
-
-wtitle {
-	letter-spacing: 1px;
-}
-
-.wrapper {
-	min-height: 6.5vh;
-}
-
-section.main{
-	min-height: 93.5vh
-}
-
-}
-
-@media screen and (max-width: 500px) {
-
-body {
-	--fontsize: 9px;
-}
-
-
-.sideContent {
-	display: none;
-	flex: 0;
-}
-
-section.main{
-	flex: 1;
-}
-
-
-
-wtitle {
-	letter-spacing: 1px;
-}
-
-.wrapper {
-	min-height: 5vh;
-}
-
-section.main{
-	min-height: 95vh
-}
-
-button.menuButton {
-	padding: 4px 8px;
-	font-size: var(--fontsize);
-}
-
-}
-
-
 
 </style>
 </head>
 
 <body>
 
-<div class="wrapper"> <!--wrapper-->
 
-<div class="wrapperBox">
-<wtitle>Página Pessoal</wtitle>
-</div>
+<div class="wrapper">
 
-<div class="wrapperBox">
-<div class="menuContent">
-
-<button class="menuButton" onclick="showContent('inicio')">
-Início
-</button>
-
-<button class="menuButton" onclick="showContent('projetos')">
-Projetos
-</button>
+<div class="wcomp">
+<p class="title">— Juan de Souza —</p>
+<button class="wrapper active" onclick="showContent('sobre'); swapButton('pbutton')" id="pbutton">Sobre</button>
+<button class="wrapper" onclick="showContent('projetos'); swapButton('sbutton')" id="sbutton">Projetos</button>
 </div>
 
 </div>
 
-</div> 
-
-<div class="notwrapper">  <!--page-->
-
-<div class="sideContent">
-</div>
+<div class="nonwrapper">
 
 <section class="main">
 
-<article id="inicio" class="active">
-<h2>Bem vindo!</h2>
+<article class="active" id="sobre">
+
+<h1>Bem Vindo!</h1>
+
+<h2>Quem sou eu?</h2>
+
 <p>Meu nome é Juan de Souza Vida Felinto, atualmente sou bacharelando na Universidade Federal Rural do Rio de Janeiro. 
 Minhas áreas de interesse são a Álgebra Abstrata e a Teoria dos Números, particularmente me interesso por Grupos e 
 Frações Contínuas.</p>
 
+<h2>Contato</h2>
+
+<p>Email: juandesouzavf@gmail.com</p>
 <a href="http://lattes.cnpq.br/7263471581961985" target="_blank" rel="noopener">Lattes</a>
 
-<p>Contato: juandesouzavf@gmail.com</p>
-
 </article>
+
 
 <article id="projetos">
-<h2>IC - Introdução às Frações Contínuas 2025.2 — ...</h2>
-<p>Neste momento estou fazendo uma iniciação científica sobre as frações contínuas, estudando suas propriedades básicas.
-Meu orientador é o professor Pedro Roberto de Lima.</p>
 
-<h2>Extensão - Reforço OBMEP 2025.2 — ...</h2>
-<p>Participo de uma prática extensionista aonde eu dou reforço escolar para a OBMEP.</p>
+<h2>IC - Frações Contínuas (2025.2 - )</h2>
 
-<h2>Monitoria - Introdução à Álgebra 2025.1 — ...</h2>
-<p>Sou monitor de Introdução à Álgebra na UFRRJ. Basicamente é teoria dos conjuntos e lógica.</p>
+<p>Estou num projeto de iniciação científica voluntária sobre as frações contínuas, especificamente as definições da fração contínua simples finita, aplicações,
+definições da fração contínua simples infinita e o Teorema de Dirichlet. Meu orientador é o professor Pedro Roberto de Lima.</p>
 
+<h2>Reforço OBMEP (2025.1 - )</h2>
+
+<p>Neste projeto extensionista eu e colegas damos a alunos de uma escola em Seropédica aulas de reforço para a OBMEP.</p>
+
+<h2>Monitoria - Introdução à Álgebra (2024.2 - )</h2>
+
+<p>Eu sou um monitor de Introdução à Álgebra na UFRRJ, ou seja, eu auxilio os alunos com duvidas fora da aula. A Introdução à Álgebra na UFRRJ abrange uma introdução à teoria dos conjuntos,
+lógica proposicional e funções.</p>
 
 </article>
 
-</section>
-
-<div class="sideContent">
+</section>	
+	
 </div>
 
-</div>
+</body>
 
 <script>
 
@@ -285,11 +212,14 @@ function showContent(id) {
 	})
 	document.getElementById(id).classList.add("active")
 }
+
+function swapButton(but) {
+	document.querySelectorAll("button").forEach(sec => {
+		sec.classList.remove("active")
+	})
+	document.getElementById(but).classList.add("active")
+}
 </script>
 
-
-
-
-</body>
 </html>
 
