@@ -3,15 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
 
-<title>Página Pessoal - Juan de Souza</title>
+<title>Juan Felinto</title>
 
 <style>
 
-@property --stdsize {
+@property --stdfont {
 	syntax: "<length>";
 	inherits: true;
-	initial-value: 15px;
+	initial-value: 8px;
 }
 
 html, body {
@@ -20,244 +21,232 @@ html, body {
 }
 
 body {
-	background-color: #202020;
+	color: #241D10;
+	font-family: "Monaco", monospace;
+	background-color: #FFF6D6;
 	background-repeat: no-repeat;
-	min-height: 100%;
+	min-height: 100vh;
 }
 
-
-p {
-	color: white;
-	font-family: Helvetica, sans-serif;
-	font-size: var(--stdsize);
+.flexy {
+	justify-content: space-around;
+	align-items: center;
+	display: flex;
 }
 
-a {
-	color: Violet;
-	font-family: Helvetica, sans-serif;
-	font-size: var(--stdsize);
+.left {
+	position: fixed;
+	left: 0;
+	flex-direction: column;
+	min-height: 100vh;
+	width: 40vw;
+}
+
+.right {
+	justify-content: center;
+	width: 60vw;
+	position: absolute;
+	right: 0px;
+	flex-wrap: wrap;
 }
 
 h1 {
-	color: white;
-	font-family: Helvetica, sans-serif;
-	font-size: calc(2 * var(--stdsize));
-	padding: 0.5vh 0;
+	font-size: calc(4 * var(--stdfont));
 }
 
 h2 {
-	color: white;
-	font-family: Helvetica, sans-serif;
-	font-size: calc(1.5 * var(--stdsize));
-	padding: 0.5vh 0;
+	font-size: calc(3 * var(--stdfont));
 }
 
-p.title	{
-	text-align: left;
-	flex: 0.6;
-	color: Violet;
-	font-style: italic;
-	letter-spacing: 3px;
-	font-family: Helvetica, sans-serif;
-	font-size: calc(1.5 * var(--stdsize));
+p {
+	font-size: calc(2 * var(--stdfont));
 }
 
-p.remind{
-	position: absolute;
-	font-size: 15px;
-	color: gray;
-	bottom: 20px;
+d {
+	font-size: calc(1.5 * var(--stdfont));
+	color: #BA9E6A;
 }
 
-button.wrapper {
-	color: Violet;
-	font-family: Helvetica, sans-serif;
-	flex: 0.2;
-	border: none;
-	background-color: transparent;
-	text-align: center;
-	font-size: var(--stdsize);
-	cursor: pointer;
-	letter-spacing: 2px;
-}
-
-button {
-	cursor: not-allowed;
-}
-
-button.active{
-	color: white;
-	cursor: pointer;
-}
-
-div.wrapper {
-	justify-content: space-around;
-	background-color: #404040;
-	display: flex;
-	width: 100%;
-	height: 100px;
-	align-items: center;
-}
-
-div.wcomp {
-	justify-content: space-between;
-	display: flex;
-	width: 640px;
+a {
+	font-size: calc(1.5 * var(--stdfont));
+	color: #DEB166;
 }
 
 
-div.nonwrapper {
-	display: flex;
-	justify-content: center;
-	align-items: top;
-	height: calc(100vh - 100px);
+
+
+.bold {
+	font-weight: bold;
 }
 
-section.main {
-	background-color: #202020;
-	flex: 1;
+.menu {
+	display: inline;
+}
+
+div.upgrad {
+	background-image: linear-gradient(to bottom, #FFF6D6, transparent);
+	position: fixed;
+	top: 0px;
+	height: 10vh;
+	width: 60vw;
+}
+
+div.downgrad {
+	background-image: linear-gradient(to top, #FFF6D6, transparent);
+	position: fixed;
+	bottom: 0px;
+	height: 10vh;
+	width: 60vw;
+}
+
+div.container {
 	display: flex;
 	flex-direction: column;
-	min-height: 100%;
-	align-items: center;
+	margin: 5vh;
 }
 
-article {
+.cmenu {
+	display: inline;
+	margin-bottom: 5vh;
+	
+}
+
+img {
+	clip-path: circle(50%);
+}
+
+.small {
 	display: none;
-	width: 640px;
 }
 
-article.active {
-	display: block;
-}
+@media only screen and (max-width: 1000px) {
 
-@media screen and (max-width: 700px) {
-
-	article {
-		width: 90vw;
-	}
-	div.wcomp {
-		width: 90vw;
-	}
-	div.wrapper {
-		height: 75px;
-	}
-	div.nonwrapper {
-		height: calc(100vh - 75px);
-	}
-	
-}
-
-@media screen and (max-height: 500px) {
-
-	article {
-		width: 90vw;
-	}
-	div.wcomp {
-		width: 90vw;
-	}
-	div.wrapper {
-		height: 50px;
-	}
-	div.nonwrapper {
-		height: calc(100vh - 50px);
-	}
-	body {
-		--stdsize: 12px;
-	}
-	p.remind {
-		font-size: 8px;
-		bottom: 5px;
-	}
-	
-}
-
-@media screen and (max-height: 300px) {
-	p.remind {
+	img {
 		display: none;
 	}
-}
+	
+	.left {
+		display: none;
+	}
+	
+	.right {
+		justify-content: center;
+		width: 100vw;
+		position: absolute;
+		top: 0;
+		flex-wrap: wrap;
+	}
+
+	.small {
+		position: absolute;
+		top: 10px;
+		right: 30px;
+		display: inline;
+	}
+	
+	div.downgrad {
+		display: none;
+	}
+	
+	div.upgrad {
+		display: none;
+	}
+	
+} 
 
 </style>
 </head>
 
 <body>
 
+<div class="left flexy">
 
-<div class="wrapper">
-
-<div class="wcomp">
-<p class="title">Juan de Souza</p>
-<button class="wrapper active" onclick="showContent('sobre'); swapButton('pbutton')" id="pbutton">Sobre</button>
-<button class="wrapper" onclick="showContent('projetos'); swapButton('sbutton')" id="sbutton">Projetos</button>
-</div>
-
-</div>
-
-<div class="nonwrapper">
-
-<section class="main">
-
-<article class="active" id="sobre">
-
-<h1>Bem Vindo!</h1>
-
-<h2>Quem sou eu?</h2>
-
-<p>Meu nome é Juan de Souza Vida Felinto, atualmente sou bacharelando na Universidade Federal Rural do Rio de Janeiro. 
-Minhas áreas de interesse são a Álgebra Abstrata e a Teoria dos Números, particularmente me interesso por Grupos e 
-Frações Contínuas.</p>
-
-<h2>Contato</h2>
-
-<p>Email: juandesouzavf@gmail.com</p>
+<div class="menu">
+<img src="eu.png" width="300" height="300">
+<h1 class="bold">Juan Felinto</h1>
+<p>Bacharelando em Matemática na UFRRJ</p>
+<p>Interesse em Teoria dos Números e Álgebra</p>
+<p>Estudando Frações Contínuas em IC</p>
+<d>juandesouzavf@gmail.com</d>
 <a href="http://lattes.cnpq.br/7263471581961985" target="_blank" rel="noopener">Lattes</a>
-
-</article>
-
-
-<article id="projetos">
-
-<h2>IC - Frações Contínuas (2025.2 - )</h2>
-
-<p>Estou num projeto de iniciação científica voluntária sobre as frações contínuas, especificamente as definições da fração contínua simples finita, aplicações,
-definições da fração contínua simples infinita e o Teorema de Dirichlet. Meu orientador é o professor Pedro Roberto de Lima.</p>
-
-<h2>Reforço OBMEP (2025.1 - )</h2>
-
-<p>Neste projeto extensionista eu e colegas damos a alunos de uma escola em Seropédica aulas de reforço para a OBMEP.</p>
-
-<h2>Monitoria - Introdução à Álgebra (2024.2 - )</h2>
-
-<p>Eu sou um monitor de Introdução à Álgebra na UFRRJ, ou seja, eu auxilio os alunos com duvidas fora da aula. A Introdução à Álgebra na UFRRJ abrange uma introdução à teoria dos conjuntos,
-lógica proposicional e funções.</p>
-
-</article>
-
-<p class="remind">Juan de Souza Vida Felinto</p>
-
-</section>	
+</div>
 
 </div>
+
+<div class="menu small">
+<h2 class="bold">Juan Felinto</h2>
+<a href="http://lattes.cnpq.br/7263471581961985" target="_blank" rel="noopener">Lattes</a>
+</div>
+
+<div class="right flexy">
+<div class="upgrad"></div>
+
+<div class="container flexy">
+
+<div class="cmenu">
+<h1 class="bold">Projetos</h1>
+<h2 class="bold">Monitor</h2>
+<p>Fui monitor de Introdução à Álgebra, ajudando alunos em teoria dos conjuntos, lógica, relações e funções.</p>
+
+$$\neg (P \wedge Q) \iff (\neg P) \vee (\neg Q)$$
+
+</div>
+
+<div class="cmenu">
+<h2 class="bold">Frações Contínuas</h2>
+<p>Participo voluntariamente de um programa de IC, sobre frações contínuas. Frações contínuas são uma forma de representaros números reais, com frações finitas (racionais) ou infinitas (irracionais).</p>
+
+$$\pi = 3+\cfrac{1}{7+
+\cfrac{1}{15+\ddots}}$$
+
+</div>
+
+<div class="cmenu">
+<h2 class="bold">OBMEP</h2>
+<p>Participo de um projeto de extensão da universidade, aonde eu e colegas vamos à uma escola e damos aulas de reforço para a OBMEP. Nesse mesmo projeto fizemos questões para uma olimpíada.</p>
+</div>
+
+<div class="cmenu">
+<d>■-■-■</d>
+</div>
+
+<div class="cmenu">
+	
+<h1 class="bold">Timeline</h1>
+
+<div class="cmenu">
+<p>2024: Ingressei no bacharelado de matemática da UFRRJ, escolhi seguir a modalidade pura, iniciei como monitor.</p>
+</div>
+
+<div class="cmenu">
+<p>2025: Iniciei minha IC em frações contínuas. Participei do projeto de extensão.</p>
+</div>
+
+<div class="cmenu">
+2026: -
+</div>
+
+</div>
+
+<div class="cmenu">
+<d>■-■-■</d>
+</div>
+
+<div class="cmenu">
+<h1 class="bold">Outras Coisas</h1>
+
+<p>Também tenho interesse em programação. Uso principalmente Lua mas também sei o básico de Python. Outro interesse meu são os idiomas, estou aprendendo atualmente o chinês.</p>
+</div>
+
+
+</div>
+
+
+
+<div class="downgrad"></div>
+</div>
+
+
 
 </body>
-
-<script>
-
-function showContent(id) {
-	document.querySelectorAll("article").forEach(sec => {
-		sec.classList.remove("active")
-	})
-	document.getElementById(id).classList.add("active")
-}
-
-function swapButton(but) {
-	document.querySelectorAll("button").forEach(sec => {
-		sec.classList.remove("active")
-	})
-	document.getElementById(but).classList.add("active")
-}
-</script>
-
-</html>
 
