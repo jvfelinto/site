@@ -108,7 +108,6 @@ div.container {
 .cmenu {
 	display: inline;
 	margin-bottom: 5vh;
-	
 }
 
 img {
@@ -117,13 +116,22 @@ img {
 
 .small {
 	display: none;
+	z-index: 10;
+	width: 100vw;
+	position: sticky;
+	top: 0px;
+	background-color: #FFF6D6;
+	align-items: center;
+	justify-content: center;
+	gap: 2vw;
+	height: 10vh;
+}
+
+.mjx-chtml, .mjx-svg {
+    z-index: 1;
 }
 
 @media only screen and (max-width: 1000px) {
-
-	img {
-		display: none;
-	}
 	
 	.left {
 		display: none;
@@ -138,20 +146,22 @@ img {
 	}
 
 	.small {
-		position: absolute;
-		top: 10px;
-		right: 30px;
-		display: inline;
+		display: flex;
+	}
+	
+	.big {
+		display: none;
 	}
 	
 	div.downgrad {
 		display: none;
 	}
 	
-	div.upgrad {
-		display: none;
+	div.gsmall {
+		top: 10vh;
+		height: 10vh;
+		width: 100vw;
 	}
-	
 } 
 
 </style>
@@ -162,24 +172,27 @@ img {
 <div class="left flexy">
 
 <div class="menu">
-<img src="eu.png" width="300" height="300">
+<img class="big" src="eu.png" width="300" height="300">
 <h1 class="bold">Juan Felinto</h1>
 <p>Bacharelando em Matemática na UFRRJ</p>
 <p>Interesse em Teoria dos Números e Álgebra</p>
-<p>Estudando Frações Contínuas em Iniciação Científica</p>
+<p>Estudando Frações Contínuas em IC</p>
 <d>juandesouzavf@gmail.com</d>
 <a href="http://lattes.cnpq.br/7263471581961985" target="_blank" rel="noopener">Lattes</a>
 </div>
 
 </div>
 
+<div class="right flexy">
+	
 <div class="menu small">
+<img src="eu.png" width=70vh height=70vh>
 <h2 class="bold">Juan Felinto</h2>
 <a href="http://lattes.cnpq.br/7263471581961985" target="_blank" rel="noopener">Lattes</a>
+<div class="upgrad gsmall"></div>
 </div>
 
-<div class="right flexy">
-<div class="upgrad"></div>
+<div class="upgrad big"></div>
 
 <div class="container flexy">
 
@@ -194,7 +207,7 @@ $$\neg (P \wedge Q) \iff (\neg P) \vee (\neg Q)$$
 
 <div class="cmenu">
 <h2 class="bold">Frações Contínuas</h2>
-<p>Participo voluntariamente de um programa de IC, sobre frações contínuas. Frações contínuas são uma forma de representar os números reais, com frações finitas (racionais) ou infinitas (irracionais).</p>
+<p>Participo voluntariamente de um programa de IC, sobre frações contínuas. Frações contínuas são uma forma de representaros números reais, com frações finitas (racionais) ou infinitas (irracionais).</p>
 
 $$\pi = 3+\cfrac{1}{7+
 \cfrac{1}{15+\ddots}}$$
@@ -249,5 +262,4 @@ $$\pi = 3+\cfrac{1}{7+
 
 
 </body>
-
 
