@@ -97,7 +97,7 @@ a {
 div.upgrad {
 	background-image: linear-gradient(to bottom, #FFFFFF, transparent);
 	position: fixed;
-	top: 0px;
+	top: 3vh;
 	height: 10vh;
 	width: 60vw;
 	z-index: 10;
@@ -133,7 +133,7 @@ img {
 	z-index: 10;
 	width: 100vw;
 	position: sticky;
-	top: 0px;
+	top: 3vh;
 	background-color: #FFFFFF;
 	align-items: center;
 	justify-content: center;
@@ -172,7 +172,7 @@ img {
 	}
 	
 	div.gsmall {
-		top: 20vh;
+		top: 23vh;
 		height: 10vh;
 		width: 100vw;
 	}
@@ -214,11 +214,46 @@ img {
 	}
 }
 
+div.faixadiv {
+  display: flex;
+  z-index: 100;
+  height: 3vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #EEEEEE;
+  align-items: center;
+}
+
+#faixa {
+  margin: 0;
+  white-space: nowrap;
+  transform: translateX(100%);
+  animation: slide 28800s linear infinite;
+  }
+
+@keyframes slide {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(-100%); }
+}
 
 </style>
 </head>
 
 <body>
+
+<div class="faixadiv">
+<p id="faixa"></p>
+</div>
+
+<script>
+  fetch('pi.txt')
+    .then(res => res.text())
+    .then(texto => {
+      document.getElementById('faixa').textContent = texto.trim();
+    })
+    .catch(err => console.error('Erro ao carregar arquivo:', err));
+</script>
 
 <div class="left flexy">
 
