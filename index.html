@@ -90,6 +90,10 @@ a {
 	display: inline;
 }
 
+.mtext {
+  margin: 5vh;
+}
+
 div.upgrad {
 	background-image: linear-gradient(to bottom, #FFFFFF, transparent);
 	position: fixed;
@@ -134,7 +138,7 @@ img {
 	align-items: center;
 	justify-content: center;
 	gap: 2vw;
-	height: 10vh;
+	height: 20vh;
 }
 
 .mjx-chtml, .mjx-svg {
@@ -168,7 +172,7 @@ img {
 	}
 	
 	div.gsmall {
-		top: 10vh;
+		top: 20vh;
 		height: 10vh;
 		width: 100vw;
 	}
@@ -186,6 +190,31 @@ img {
 	}
 }
 
+@media only screen and (max-width: 1400px) and (not (max-height: 500px)){
+	
+	body {
+		--stdfont: 7px;
+	}
+	
+	img {
+		max-width: 200px;
+		max-height: 200px;
+	}
+}
+
+@media only screen and (max-width: 700px) and (not (max-height: 500px)){
+	
+	body {
+		--stdfont: 5px;
+	}
+	
+	img {
+		max-width: 200px;
+		max-height: 200px;
+	}
+}
+
+
 </style>
 </head>
 
@@ -193,12 +222,11 @@ img {
 
 <div class="left flexy">
 
-<div class="menu">
+<div class="menu mtext">
 <img class="big" src="eu.png" width=250vh height=250vh>
 <h1 class="bold">Juan Felinto</h1>
 <p>Bacharelando em Matemática na UFRRJ</p>
-<p>Interesse em Teoria dos Números e Álgebra</p>
-<p>Estudando Frações Contínuas em Iniciação Científica</p>
+<p>Interesse em Teoria dos Números, Álgebra, Sistemas Dinâmicos...</p>
 <d>juandesouzavf@gmail.com</d>
 <a href="http://lattes.cnpq.br/7263471581961985" target="_blank" rel="noopener">Lattes</a>
 </div>
@@ -208,9 +236,12 @@ img {
 <div class="right flexy">
 	
 <div class="menu small">
-<img src="eu.png" width=70vh height=70vh>
+<img src="eu.png" width=100vh height=100vh>
+<div>
 <h2 class="bold">Juan Felinto</h2>
+<p> Bacharelando em Matemática na UFRRJ </p>
 <a href="http://lattes.cnpq.br/7263471581961985" target="_blank" rel="noopener">Lattes</a>
+</div>
 <div class="upgrad gsmall"></div>
 </div>
 
@@ -219,7 +250,13 @@ img {
 <div class="container flexy">
 
 <div class="cmenu">
-<h1 class="bold">Projetos</h1>
+<h1 class="bold">-> Agora</h1>
+
+<h2 class="bold">Estudo</h2>
+<p>Estou no sexto período na UFRRJ, matriculado nas matérias de Análise Real II, Cálculo III, Introdução às Curvas Algébricas e Física II Mecânica.</p>
+</div>
+
+<div class="cmenu">
 <h2 class="bold">Monitoria</h2>
 <p>Sou monitor remunerado de Introdução à Álgebra e Introdução à Teoria dos Números, ajudo alunos com dúvidas das 2 disciplinas, ou seja, conjuntos, lógica, funções, propriedades dos inteiros, demonstrações no geral.</p>
 
@@ -228,60 +265,26 @@ $$\neg (P \wedge Q) \iff (\neg P) \vee (\neg Q)$$
 </div>
 
 <div class="cmenu">
-<h2 class="bold">Frações Contínuas</h2>
-<p>Participo voluntariamente de um programa de IC, sobre frações contínuas. Frações contínuas são uma forma de representar os números reais, com frações finitas (racionais) ou infinitas (irracionais).</p>
+<h2 class="bold">Iniciação Científica</h2>
+<p>Participo voluntariamente de um programa de IC, sobre as propriedades dinâmicas das frações contínuas. Essa IC continua o trabalho de uma IC anterior sobre uma introdução às frações contínuas, que eu irei linkar aqui quando for publicado.</p>
 
-$$\pi = 3+\cfrac{1}{7+
-\cfrac{1}{15+\ddots}}$$
+$$\pi = \cfrac{4}{1+
+\cfrac{1^2}{3+
+\cfrac{2^2}{5+\ddots}}}$$
 
 </div>
 
-<div class="cmenu">
-<h2 class="bold">OBMEP</h2>
-<p>Participei de um projeto de extensão da universidade, de aulas de reforço para a OBMEP.</p>
-</div>
-
-<div class="cmenu">
-<h2 class="bold">Questões Para Olimpíadas</h2>
-<p>Também como projeto de extensão, faço questões de matemática para olimpíadas.</p>
-</div>
-
-<div class="cmenu">
-<d>•••</d>
-</div>
 
 <div class="cmenu">
 	
-<h1 class="bold">Timeline</h1>
+<h1 class="bold">-> Contato</h1>
 
 <div class="cmenu">
-<p>2024: Ingressei no bacharelado de matemática da UFRRJ, escolhi seguir a modalidade pura, iniciei como monitor.</p>
-</div>
-
-<div class="cmenu">
-<p>2025: Iniciei minha IC em frações contínuas. Participei do projeto de extensão da OBMEP.</p>
-</div>
-
-<div class="cmenu">
-2026: -
+<p>Email: juandesouzavf@gmail.com</p>
+<p>Qualquer contato é bem vindo.</p>
 </div>
 
 </div>
-
-<div class="cmenu">
-<d>•••</d>
-</div>
-
-<div class="cmenu">
-<h1 class="bold">Outras Coisas</h1>
-
-<p>Também tenho interesse em programação, uso principalmente Lua mas também sei o básico de Python e C. Outro interesse meu são idiomas.</p>
-</div>
-
-
-</div>
-
-
 
 <div class="downgrad"></div>
 </div>
